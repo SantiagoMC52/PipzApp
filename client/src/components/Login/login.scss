@@ -1,0 +1,67 @@
+@import './../../styles/mixins.scss';
+@import './../../styles/variables.scss';
+
+@font-face {
+    font-family: 'PizzaFont';
+    src: url('./../../assets/pizza-font.ttf')
+}
+
+@font-face {
+    font-family: 'TextsFont';
+    src: url('./../../assets/texts-font.ttf');
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $main-color;
+}
+
+h2 {
+    @include flex(flex, row, center);
+    font-size: 50px;
+    font-family: PizzaFont, Arial, Helvetica, sans-serif;
+}
+
+.login-title{
+    @include flex(flex, row, center);
+    font-size: 40px;
+    font-family: PizzaFont, Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    @include flex(flex, row, center);
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-family: TextsFont, Arial, Helvetica, sans-serif;
+}
+
+.login-container {
+    @include flex(flex, column, center);
+    overflow: hidden;
+    align-items: center;
+
+    img {
+        margin: 0 auto;
+    }
+
+    &__form {
+        @include flex(flex, column, space-around);
+        align-items: center;
+        height: 50vh;
+
+        input {
+            @include inputs;
+        }
+
+        button {
+            @include buttons(TextsFont);
+        }
+    }
+}

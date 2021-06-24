@@ -1,0 +1,121 @@
+@import './../../styles/mixins.scss';
+@import './../../styles/variables.scss';
+
+@font-face {
+    font-family: 'PizzaFont';
+    src: url('./../../assets/pizza-font.ttf')
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    margin: 0 auto;
+    font-family: PizzaFont, Arial, Helvetica, sans-serif;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.cart-container {
+
+    @include flex(flex, row, center);
+    font-size: 25px;
+    font-family: $main-font;
+
+    &__title {
+        margin: 0 auto;
+        font-family: PizzaFont, Arial, Helvetica, sans-serif;
+        padding: 10px;
+    }
+
+    &__products {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-family: $main-font;
+
+        &-list {
+            list-style: none;
+            margin-left: 5px;
+            border-radius: 15px;
+            margin-top: 5px;
+            border: 1px solid black;
+            padding: 10px;
+            background-color: white;
+        }
+
+
+
+        .action {
+            display: flex;
+            justify-content: space-around;
+
+            &__action-btns {
+                margin-left: 5px;
+                width: 60px;
+                border: 1px solid black;
+                background: #F3B918;
+                border-radius: 5px;
+                color: black;
+            }
+        }
+    }
+
+    &__no-products {
+
+        h4 {
+            display: flex;
+            justify-content: center;
+            font-family: PizzaFont, Arial, Helvetica, sans-serif;
+            margin-top: 40px;
+            padding: 10px;
+            letter-spacing: 5px;
+        }
+
+        img {
+            width: 400px;
+        }
+    }
+}
+
+.total-cost {
+    @include flex(flex, row, center);
+    margin-top: 20px;
+    font-family: $main-font;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+
+    &__back,
+    &__ticket {
+
+        @include flex(flex, row, center);
+        width: 90px;
+        text-align: center;
+        padding: 5px;
+        @include buttons(null);
+        margin: 5px;
+    }
+}
+.payment-container{
+    @include flex(flex, row, center);
+
+    &__button{
+    @include buttons(null);
+        
+    }
+}

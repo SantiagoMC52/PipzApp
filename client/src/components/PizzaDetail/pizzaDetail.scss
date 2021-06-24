@@ -1,0 +1,116 @@
+@import './../../styles/mixins.scss';
+@import './../../styles/variables.scss';
+
+@font-face {
+    font-family: 'PizzaFont';
+    src: url('./../../assets/pizza-font.ttf')
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.details-container {
+    @include flex(flex, column, null);
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+
+    &__title {
+        font-family: PizzaFont, Arial, Helvetica, sans-serif;
+    }
+
+    &__image {
+        @include flex(flex, row, center);
+    }
+
+    &__ingredient {
+        @include flex(flex, row, center);
+        text-align: center;
+        font-family: $main-font;
+    }
+
+    &__info {
+        @include flex(flex, row, center);
+        margin-top: 10px;
+
+        ul {
+            width: 60%;
+
+            li {
+                @include flex(flex, row, center);
+                list-style: none;
+                font-size: 25px;
+                font-family: $main-font;
+                justify-content: space-between;
+                margin-bottom: 10px;
+
+                width: 100%;
+
+                button {
+                    @include buttons(null);
+                }
+            }
+        }
+
+
+    }
+
+    a {
+        text-decoration: none
+    }
+
+    &__back-btn {
+        @include flex(flex, row, center);
+        width: 90px;
+        text-align: center;
+        padding: 5px;
+        @include buttons(null);
+    }
+}
+
+.container-error {
+    @include flex(flex, column, center);
+    align-content: center;
+
+    &__msg {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+
+    .details-container {
+
+        &__info {
+            @include flex(flex, row, center);
+            margin-top: 10px;
+
+            ul {
+                width: 93%;
+
+                li {
+                    @include flex(flex, row, center);
+                    list-style: none;
+                    font-size: 25px;
+                    font-family: $main-font;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+
+                    button {
+                        @include buttons(null);
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
+}

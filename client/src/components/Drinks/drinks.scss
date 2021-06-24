@@ -1,0 +1,66 @@
+@import './../../styles/mixins.scss';
+@import './../../styles/variables.scss';
+
+@font-face {
+    font-family: 'PizzaFont';
+    src: url('./../../assets/pizza-font.ttf')
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    @include flex(flex, row, center);
+    margin-top: 30px;
+    font-family: PizzaFont, Arial, Helvetica, sans-serif;
+    letter-spacing: 10px;
+}
+
+.drinks-container {
+    @include flex(flex, column, null);
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+
+    &__line {
+        margin:  0 auto;
+        border: 1px solid rgb(0, 0, 0);
+        margin-top: 5px;
+        width: 40%;
+    }
+
+    ul {
+        @include flex(flex, column, null);
+        text-align: center;
+
+        li {
+            @include flex(flex, column, null);
+            align-content: center;
+
+            h4{
+                margin: 0 auto;
+                margin-top: 10px;
+                font-size: 25px;
+            }
+
+            p{
+                display: flex;
+                justify-content: center;
+            }
+
+            .image{
+                width: 80%;
+            }
+        }
+    }
+
+    &__add{
+        @include buttons(null);
+        margin: 0 auto;
+    }
+}

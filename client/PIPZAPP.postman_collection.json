@@ -1,0 +1,609 @@
+{
+	"info": {
+		"_postman_id": "5950e632-08eb-4695-ba78-6614285c1aba",
+		"name": "PIPZAPP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PIZZAS",
+			"item": [
+				{
+					"name": "POST PIZZAS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"name\": \"Gaspar\",\r\n\t\t\"ingredients\": [\r\n            \"Vegan mozzarela cheese \",\r\n            \"Tomatoe sauce\",\r\n            \"Mushmrooms\",\r\n            \"Black olives\",\r\n            \"green pepper\",\r\n            \"Onion\"\r\n        ],\r\n\t\t\"type\": [\r\n            {\"size\": \"Small\", \"price\": \"04.25€\"},\r\n            {\"size\": \"Medium\", \"price\": \"10.25€\"},\r\n            {\"size\": \"Large\", \"price\": \"15.25€\"}\r\n        ],\r\n        \"image\": \"https://www.dominospizza.es/images/campinapan.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3103/api/pizzas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"pizzas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PIZZAS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwYjlmMGRjNzAzMDg0M2EyMDlhNzQ4MyIsIm5hbWUiOiJkYXZpZCJ9LCJpYXQiOjE2MjI4Mjk3Nzh9.4JQF8769Klqcy4BCuTQlcAwKunxWw7BD9ZDyQUY_NOc",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3103/api/pizzas/60b3ac2e87106529e0f44eae",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"pizzas",
+								"60b3ac2e87106529e0f44eae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE PIZZA BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3103/api/pizzas/60b3a7ba55cca3349c8ebc85",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"pizzas",
+								"60b3a7ba55cca3349c8ebc85"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE PIZZA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"name\": \"Hawaiana\",\r\n\t\t\"ingredients\": [\"Mozzarela cheese \", \"Tomatoe sauce\", \"Pineapple\", \"Ham\"],\r\n\t\t\"type\": [\r\n            {\"size\": \"Small\", \"price\": \"04.25€\"},\r\n            {\"size\": \"Medium\", \"price\": \"10.25€\"},\r\n            {\"size\": \"Large\", \"price\": \"15.25€\"}\r\n        ],\r\n        \"image\": \"https://www.dominospizza.es/images/HawaianaDelivery_H2200923_0_ES.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3103/api/pizzas/60b39b1465ac0419d8deff25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"pizzas",
+								"60b39b1465ac0419d8deff25"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DRINKS",
+			"item": [
+				{
+					"name": "POST DRINKS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"name\": \"Water\",\r\n    \"price\": \"1.00€\",\r\n    \"quantity\": \"350ml\",\r\n    \"image\": \"https://www.dominospizza.es/images/agua_lanjaron.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3103/api/drinks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"drinks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL DRINKS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwYjc0NGZhMTliNDc5MDhmMDZkMzc3ZCIsIm5hbWUiOiJob3NuaSJ9LCJpYXQiOjE2MjI2MjM0OTV9.T5Nd7GukRLDPLM7Gj8soejXa-XfRi_RCP5cmjj5Ff64",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3103/api/drinks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"drinks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE DRINK BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3103/api/drinks/60b4a9c9218b131a405b038e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"drinks",
+								"60b4a9c9218b131a405b038e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE DRINK",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"_id\": \"60b3cded03ee2b0e98ff387c\",\r\n        \"drink\": [\r\n            {\r\n                \"_id\": \"60b3cded03ee2b0e98ff387d\",\r\n                \"name\": \"Red Bull\",\r\n                \"price\": \"2.00€\",\r\n                \"quantity\": \"350ml\"\r\n            }\r\n        ],\r\n        \"__v\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3103/api/drinks/60b3cded03ee2b0e98ff387c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"drinks",
+								"60b3cded03ee2b0e98ff387c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "COSTUMERS",
+			"item": [
+				{
+					"name": "POST COSTUMERS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"name\": \"hedi\",\r\n        \"telephone\": \"hedi\",\r\n        \"street\": \"hedi\",\r\n        \"number\": \"hedi\",\r\n        \"floor\": \"hedi\",\r\n        \"door\": \"hedi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3103/api/costumers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"costumers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL COSTUMERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3103/api/costumers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"costumers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE COSTUMER BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3103/api/costumers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"costumers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE COSTUMERS",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"name\": \"Hawaiana\",\r\n\t\t\"ingredients\": [\"Mozzarela cheese \", \"Tomatoe sauce\", \"Pineapple\", \"Ham\"],\r\n\t\t\"type\": [\r\n            {\"size\": \"Small\", \"price\": \"04.25€\"},\r\n            {\"size\": \"Medium\", \"price\": \"10.25€\"},\r\n            {\"size\": \"Large\", \"price\": \"15.25€\"}\r\n        ],\r\n\t\t\"price\": \"10.25€\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3103/api/costumers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"costumers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "POST USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"name\": \"hedi\",\r\n        \"password\": \"hedi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3103/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL USERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3103/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE USER BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3103/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE USERS",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"name\": \"Hawaiana\",\r\n\t\t\"ingredients\": [\"Mozzarela cheese \", \"Tomatoe sauce\", \"Pineapple\", \"Ham\"],\r\n\t\t\"type\": [\r\n            {\"size\": \"Small\", \"price\": \"04.25€\"},\r\n            {\"size\": \"Medium\", \"price\": \"10.25€\"},\r\n            {\"size\": \"Large\", \"price\": \"15.25€\"}\r\n        ],\r\n\t\t\"price\": \"10.25€\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3103/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PASSPORT JWT",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"name\": \"david\",\r\n        \"password\": \"david\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3103/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"name\": \"david\",\r\n        \"password\": \"david\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3103/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwYjlmMGRjNzAzMDg0M2EyMDlhNzQ4MyIsIm5hbWUiOiJkYXZpZCJ9LCJpYXQiOjE2MjI4Mjk3Nzh9.4JQF8769Klqcy4BCuTQlcAwKunxWw7BD9ZDyQUY_NOc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3103/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwYWZhM2M3MzMxZmZiMDZhNDZkMjljNiIsImVtYWlsIjoicGVwZUBoZXJvZXMuY29tIn0sImlhdCI6MTYyMjEyODE4Nn0.9Iww0wxeCV0gnzcS4e6h3tWSdEjHB8QiqXuoSw0Z_YM\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3103/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3103/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7fSwiaWF0IjoxNjIyMjA0MTczLCJleHAiOjE2MjIyMDQyMzN9.WkuILV7MdJt4AZ3ky009Wh6LDVJbt7mrUdLkjdONYOQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3103/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3103",
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

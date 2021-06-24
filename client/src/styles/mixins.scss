@@ -1,0 +1,33 @@
+@mixin flex($flexType, $flexDirectionType, $justify) {
+    display: $flexType;
+    flex-direction: $flexDirectionType;
+    justify-content: $justify;
+}
+
+@mixin inputs() {
+    width: 200px;
+    height: 30px;
+    border: none;
+    box-shadow: 10px 5px 10px black;
+    border-radius: 5px;
+}
+
+@mixin buttons($font) {
+    width: 150px;
+    height: 35px;
+    background: black;
+    color: white;
+    font-size: 20px;
+    border: none;
+    font-family: $font;
+    border-radius: 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: white;
+        color: black;
+    }
+}

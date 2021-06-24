@@ -1,0 +1,36 @@
+@import './../../styles/mixins.scss';
+@import './../../styles/variables.scss';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-container__image{
+    @include flex(flex, row, center);
+}
+
+.navbar {
+    font-size: 25px;
+    font-family: $main-font;
+    font-weight: 600;
+
+    ul {
+        @include flex(flex, row, space-around);
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        img {
+            color: red;
+            width: 40px;
+            height: 30px;
+        }
+    }
+}

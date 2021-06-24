@@ -1,0 +1,98 @@
+@import './../../styles/mixins.scss';
+@import './../../styles/variables.scss';
+
+@font-face {
+    font-family: 'PizzaFont';
+    src: url('./../../assets/pizza-font.ttf')
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $main-color;
+    height: 100vh;
+}
+
+
+.ticket-header {
+    @include flex(flex, column, null);
+    align-items: center;
+
+    img {
+        width: 150px;
+        height: 150px;
+    }
+
+    &-title {
+        @include flex(flex, row, center);
+        font-family: PizzaFont, Arial, Helvetica, sans-serif;
+        letter-spacing: 10px;
+
+    }
+
+}
+
+
+.ticket-main {
+    @include flex(flex, column, null);
+    background-color: #F1DA7F;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 35px;
+    align-items: center;
+    font-family: $main-font;
+    letter-spacing: 2px;
+
+
+    &__info {
+        list-style: none;
+        font-size: 20px;
+    }
+
+    &__products {
+        list-style: none;
+        font-size: 20px;
+        margin-top: 40px;
+
+        &-list{
+            margin-top: 5px;
+        }
+
+        &-decoration{
+            border: 1px solid black;
+        }
+    }
+}
+
+.footer {
+    @include flex(flex, column, center);
+    align-items: center;
+
+    &__cost {
+        font-family: $main-font;
+        font-size: 25px;
+        font-weight: 600;
+
+    }
+
+    &__exit {
+        @include buttons($main-font);
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 800px) {
+    .ticket-main {
+        max-width: 420px;
+        margin: 0 auto;
+        
+    }
+  }
