@@ -1,7 +1,7 @@
 ## PipzApp
 
 <p align="center">
- <img src="https://trello-attachments.s3.amazonaws.com/606b2ae98fdcaf38c8ff3ea2/60b491868ec961305b7e731f/fa9a5b78a52cde5774e35b0849cc4d67/pipzaap-logo.PNG" alt="pipzapp-logo">
+ <img src="https://ibb.co/6Zd0891" alt="pipzapp-logo">
 </p>
 
 ## Steps to reproduce
