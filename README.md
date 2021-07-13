@@ -1,7 +1,7 @@
 ## PipzApp
 
 <p align="center">
- <img src="https://ibb.co/6Zd0891" alt="pipzapp-logo">
+ <img src="https://i.ibb.co/j5pkz0W/pipzapp-logo.png" alt="pipzapp-logo">
 </p>
 
 ## Steps to reproduce
